@@ -10,19 +10,19 @@ endif
 endif
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/fluid/sepolicy/qcom/private
+    device/fusion/sepolicy/qcom/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/fluid/sepolicy/qcom/dynamic \
-    device/fluid/sepolicy/qcom/system
+    device/fusion/sepolicy/qcom/dynamic \
+    device/fusion/sepolicy/qcom/system
 else
 BOARD_SEPOLICY_DIRS += \
-    device/fluid/sepolicy/qcom/dynamic \
-    device/fluid/sepolicy/qcom/vendor
+    device/fusion/sepolicy/qcom/dynamic \
+    device/fusion/sepolicy/qcom/vendor
 endif
 
 ifneq ($(filter msm8226 msm8610 msm8974 msm8909 msm8916 msm8952 msm8992 msm8994,$(TARGET_BOARD_PLATFORM)),)
 BOARD_SEPOLICY_DIRS += \
-    device/fluid/sepolicy/qcom/legacy-vendor
+    device/fusion/sepolicy/qcom/legacy-vendor
 endif
